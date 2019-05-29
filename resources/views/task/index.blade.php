@@ -9,9 +9,12 @@
     <ul class="list-group list-group-flush mt-4">
     @if (count($tasks) > 0)
         @foreach ($tasks as $task)
-        <li class="list-group-item">
+        <li class="list-group-item d-flex justify-content-between">
             <a href="{{ url('task/' . $task->id) }}">{{ $task->content }}</a>
-            
+            {!! Form::model($task, ['route' => ['task.destroy', $task->id], 'method' => 'delete']) !!}
+                {!! Form::button('<i class="fas fa-times"></i>', ['class' => 'p-0 btn btn-link', 'type' => 'submit']) !!}
+            {!! Form::close() !!}
+
         </li>
         @endforeach
     @else
