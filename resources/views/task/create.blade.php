@@ -10,6 +10,10 @@
             <div class="form-group">
                 {!! Form::text('content', null, ['class' => 'form-control', 'placeholder' => 'Task', 'autofocus']) !!}
             </div>
+            <div class="form-group">
+                {!! Form::select('status', ['New' => 'New', 'Working' => 'Working', 'Pending' => 'Pending', 'Done' => 'Done'], null, ['class' => 'form-control']) !!}
+
+            </div>
             
             {!! Form::submit('Add', ['class' => 'btn btn-success btn-block']) !!}
         

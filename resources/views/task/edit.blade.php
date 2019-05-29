@@ -10,6 +10,10 @@
             
                 <div class="form-group">
                     {!! Form::text('content', null, ['class' => 'form-control', 'placeholder' => 'Task']) !!}
+                </div>   
+                
+                <div class="form-group">
+                   {!! Form::select('status', ['New' => 'New', 'Working' => 'Working', 'Pending' => 'Pending', 'Done' => 'Done'], null, ['class' => 'form-control']) !!}
                 </div>
                 
                 {!! Form::submit('Update', ['class' => 'btn btn-light']) !!}

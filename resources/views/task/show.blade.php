@@ -14,6 +14,10 @@
             <td>{{ $task->content }}</td>
         </tr>
         <tr>
+            <th>Status</th>
+            <td>{{ $task->status }}</td>
+        </tr>
+        <tr>
             <th>AddedAt</th>
             <td>{{ $task->created_at }}</td>
         </tr>

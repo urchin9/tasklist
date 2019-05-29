@@ -10,7 +10,8 @@
     @if (count($tasks) > 0)
         @foreach ($tasks as $task)
         <li class="list-group-item d-flex justify-content-between">
-            <a href="{{ url('task/' . $task->id) }}">{{ $task->content }}</a>
+            <a class="col-4" href="{{ url('task/' . $task->id) }}">{{ $task->content }}</a>
+            <span class="col-4">{{ $task->status }}</span>
             {!! Form::model($task, ['route' => ['task.destroy', $task->id], 'method' => 'delete']) !!}
                 {!! Form::button('<i class="fas fa-times"></i>', ['class' => 'p-0 btn btn-link', 'type' => 'submit']) !!}
             {!! Form::close() !!}
