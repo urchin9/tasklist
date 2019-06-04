@@ -81,7 +81,11 @@ class TasksController extends Controller
     {
         $task = Task::find($id);
         
-        return view('task.show', ['task' => $task]);
+        if (\Auth::User()->id === $task->user_id) {
+            return view('task.show', ['task' => $task]);
+        } else {
+            return redirect('/');
+        }
         
     }
 
@@ -95,8 +99,14 @@ class TasksController extends Controller
     {
         $task = Task::find($id);
         
-        return view('task.edit', ['task' => $task]);
-    }
+        if (\Auth::User()->id === $task->user_id) {
+            return view('task.edit', ['task' => $task]);
+        } else {
+            return redirect('/');
+        }
+    } 
+    
+    
 
     /**
      * Update the specified resource in storage.
