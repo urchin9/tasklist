@@ -4,7 +4,7 @@
                 <a href="/" class="navbar-brand">MyTasks</a>
                 
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span><i class="fas fa-hamburger"></i></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="nav-bar">
