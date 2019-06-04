@@ -8,23 +8,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
-        <header class="mb-3">
-            <nav class="navbar navbar-default navbar-expand-sm navbar-light bg-light">
- 
-                <a href="/" class="navbar-brand">MyTasks</a>
-                
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="nav-bar">
-                    <ul class="navbar-nav mr-auto"></ul>
-                    <ul class="navbar-nav">
-                        <li>{!! link_to_route('task.create', 'Add New Task', null, ['class' => 'btn btn-primary']) !!}</li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+          @include('commons.navbar')
         <main>
             <div class="container">
                 @yield('content')
